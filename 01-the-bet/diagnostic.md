@@ -15,7 +15,7 @@
 
 **Score rationale:** We have competitors that also understand the context of where we work.
 
-**Named attacker (from partner challenge): MediaRadar**
+**Named attacker (from partner challenge):** MediaRadar
 
 ---
 
