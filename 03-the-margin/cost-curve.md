@@ -1,41 +1,188 @@
+
 # Cost Curve & Pricing Strategy
+
+**Product:** AdQuest  
+**Business Model:** Existing advertising analytics SaaS platform adding AI capabilities  
+**Financial Assumptions:** Hypothetical estimates for classroom modeling
+
+## Packaging Decision
+
+**Hero SKU:** Outcome — actionable advertising intelligence
+
+**Leader:** Advertising Opportunity Intelligence
+
+**Filler:** AI Summaries & Insights
+
+**Killer:** Combined AI Strategy Agent
+
+**Killer usage %:** 20% (hypothetical adoption assumption)
+
+**Bundle or add-on:** Premium add-on
+
+**Rationale:** AdQuest's core product provides access to proprietary advertising intelligence. Lightweight AI summaries, explanations, and recommendations enhance that core experience and remain bundled with the subscription.
+
+The Combined AI Strategy Agent delivers more computationally intensive outcomes, including predictive forecasting, opportunity discovery, competitive intelligence, and automated campaign planning.
+
+Because premium agent usage is expected to be below the 70% bundling threshold, AdQuest will monetize it separately through outcome-based usage fees.
 
 ## Cost Model
 
 | Cost Category | Per-User/Month | Notes |
 |--------------|----------------|-------|
-| Inference (primary model) | | |
-| Inference (cascading/triage) | | |
-| Infrastructure | | |
-| Data/storage | | |
-| Human-in-the-loop | | |
-| **Total AI COGS** | | |
+| Inference (primary model) | $6.80 | Mid/frontier inference and complex AI workflows, including an estimated $0.40 for premium plans |
+| Inference (cascading/triage) | $1.60 | Small-model inference, classification, summaries, and routing |
+| Infrastructure | $0 incremental | Existing hosting included in non-AI COGS; incremental AI infrastructure not yet estimated |
+| Data/storage | $0 incremental | Existing proprietary data infrastructure; incremental AI storage not yet estimated |
+| Human-in-the-loop | $0 incremental | Exception-based review; incremental labor not yet estimated |
+| **Total AI COGS** | **$8.40** | $8.00 baseline inference + $0.40 for five premium plans |
+
+### Cost Assumptions
+
+- Average AI requests/user/month: 400
+- Blended cost/request: $0.020
+- Baseline AI inference cost/user/month: $8.00
+- Incremental premium agent cost: 5 plans × $0.079 = approximately $0.40
+- Non-AI COGS/user/month: $20.00
+- Total modeled AI-enabled COGS/user/month: $28.40
+- Premium workflow costs are modeled separately from routine requests to avoid double-counting.
+
+These are estimated costs. Actual usage, model pricing, token consumption, infrastructure, and human review costs require validation.
 
 ## Cascading Strategy
-<!-- Cheap model → frontier model routing logic -->
 
-**Triage model:**
-**Frontier model:**
-**Routing rule:**
-**Expected cascade ratio:**
+**Triage model:** Small, cost-efficient language model for classification, simple queries, summaries, and request routing.
+
+**Frontier model:** Advanced reasoning model for complex competitive analysis, predictive recommendations, and multi-step strategy generation.
+
+**Routing rule:** Route requests based on complexity and required reasoning depth. Simple summaries, advertiser classification, and basic analytics queries use small models. Competitive analysis and opportunity recommendations use mid-tier models. Complex forecasting, cross-dataset reasoning, and Combined AI Strategy Agent workflows escalate to frontier models when necessary.
+
+**Expected cascade ratio:** 60% small / 20% mid / 20% frontier.
+
+### Feature-to-Model Mapping
+
+| Feature | Complexity | Model Tier | Cost/Request | Volume % | Weighted Cost |
+|---------|------------|------------|--------------|----------|---------------|
+| Summaries, basic queries, classification | Simple | Small | $0.002 | 60% | $0.0012 |
+| Competitive analysis and opportunity recommendations | Medium | Mid | $0.015 | 20% | $0.0030 |
+| Complex forecasting and AI Strategy Agent workflows | Complex | Frontier | $0.079 | 20% | $0.0158 |
+| **Blended** | | | | **100%** | **$0.0200** |
+
+The $0.079 complex-workflow estimate represents a multi-step operation rather than a single model invocation. The table illustrates expected routing economics; the separate five-plan pricing scenario assumes premium plans are incremental to baseline usage.
+
+**Optimization levers:**
+- Model cascading to avoid unnecessary frontier inference
+- Caching repeated analytics queries and summaries
+- Prompt optimization to reduce token consumption
+- Monitoring cost per completed outcome
+- Escalating to frontier models only when complexity requires it
 
 ## Pricing Model
 
-**Current pricing:**
-**Proposed AI pricing:**
-**Model:** seat-based / usage-based / outcome-based / hybrid
+**Strategy posture:** Maximize
+
+**Current pricing:** $100/user/month for access to traditional advertising analytics SaaS (hypothetical baseline).
+
+**Proposed AI pricing:** $100/user/month base subscription, including core analytics and lightweight AI features, plus $10 per completed AI Strategy Plan generated by the Combined AI Strategy Agent.
+
+**Model:** Hybrid (seat-based subscription + outcome-based usage)
+
+**Unit of work metered:** Completed AI Strategy Plan
+
+**Estimated units/user/month:** 5
+
+**Implied revenue/user/month:** $150.00
+
+### Pricing Rationale
+
+AdQuest uses hybrid pricing because customers value both ongoing access to proprietary advertising intelligence and the actionable outcomes generated by AI.
+
+The base subscription preserves predictable recurring SaaS revenue, while the per-plan fee aligns additional charges with completed work.
+
+This structure avoids subsidizing computationally intensive workflows across all customers and aligns incremental revenue with premium AI usage.
+
+Charging per completed strategy plan also reflects the customer's unit of value rather than internal model calls, tokens, or prompts.
 
 ## Stress Tests
 
+The following tests use the calculator's $100/user/month baseline, $8.00 monthly AI COGS, and $20.00 non-AI COGS. They hold revenue and non-AI costs constant to isolate inference risk.
+
 | Scenario | Impact on Margin | Response |
 |----------|-----------------|----------|
-| Inference costs 3x | | |
-| Heaviest segment doubles | | |
-| Model provider raises prices 50% | | |
+| Inference costs 3x | AI COGS $8 → $24; gross margin 72% → 56% (-16 pp) | Optimize model routing, caching, and prompt efficiency; monitor cost per outcome |
+| Heaviest segment doubles | If average AI usage doubles, AI COGS $8 → $16; gross margin 72% → 64% (-8 pp) | Meter premium workflows, introduce usage allowances, and monitor heavy-user cohorts |
+| Model provider raises prices 50% | AI COGS $8 → $12; gross margin 72% → 68% (-4 pp) | Maintain provider flexibility, optimize expensive calls, and review premium pricing |
+
+### Stress Test Interpretation
+
+AdQuest remains gross-margin positive under the modeled scenarios, but its economics are sensitive to inference costs and usage intensity.
+
+These stress tests are conservative because they assume no additional revenue from premium AI usage.
+
+The heaviest-segment scenario models doubled average usage as a proxy. Actual margin impact depends on what proportion of customers belong to the heavy-usage segment.
+
+Model cascading and outcome-based pricing provide complementary protections: cascading limits the cost of delivering work, while metered premium pricing captures additional revenue as valuable AI usage increases.
 
 ## Board One-Pager
-<!-- Before/After: Old SaaS revenue vs. AI usage revenue for your product -->
 
-**Before (traditional SaaS):**
-**After (AI-enabled):**
-**Net margin shift:**
+### Before (Traditional SaaS)
+
+- Revenue: $100/user/month
+- Pricing model: Seat-based subscription
+- Non-AI COGS: $20/user/month
+- Gross profit: $80/user/month
+- Gross margin: 80.0%
+
+**Value proposition:** Access to proprietary advertising intelligence, spending trends, competitive analysis, and reporting tools.
+
+### After (AI-Enabled)
+
+- Base subscription: $100/user/month
+- AI outcomes: 5 completed strategy plans × $10 = $50/month
+- Total revenue: $150/user/month
+- Non-AI COGS: $20.00/user/month
+- Routine AI inference COGS: $8.00/user/month
+- Premium agent COGS: $0.40/user/month
+- Total modeled COGS: $28.40/user/month
+- Gross profit: $121.60/user/month
+- Gross margin: 81.1%
+
+**Value proposition:** Actionable advertising opportunities, predictive insights, and completed AI-generated advertising strategies delivered through a combination of proprietary data and AI-powered workflows.
+
+### Net Margin Shift
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Revenue/user/month | $100.00 | $150.00 | +50.0% |
+| COGS/user/month | $20.00 | $28.40 | +$8.40 |
+| Gross profit/user/month | $80.00 | $121.60 | +$41.60 |
+| Gross margin | 80.0% | 81.1% | +1.1 percentage points |
+
+### Board Narrative
+
+AdQuest is evolving from a subscription-based advertising analytics platform into an AI-powered decision platform.
+
+By preserving recurring SaaS subscriptions and introducing outcome-based pricing for completed AI Strategy Plans, AdQuest can increase revenue per user while aligning premium AI charges with the value delivered.
+
+Under our illustrative assumptions, revenue per user increases 50%, gross profit increases approximately 52%, and gross margin improves modestly from 80.0% to 81.1%.
+
+Model cascading helps control variable inference costs, while metered premium workflows protect against disproportionate usage from power users.
+
+### Risks and Mitigations
+
+**Inference cost inflation:** Use cascading, caching, and prompt optimization to control variable costs.
+
+**Heavy-user concentration:** Monitor usage patterns, limit unmetered premium workflows, and charge for completed outcomes.
+
+**Customer pricing resistance:** Test willingness to pay and consider annual enterprise contracts with included strategy-plan credits.
+
+**Output quality and trust:** Apply quality evaluation and human escalation for complex or high-stakes recommendations.
+
+**Financial validation:** Measure actual cost per completed plan, premium adoption, incremental infrastructure and review costs, and customer willingness to pay before committing to the proposed pricing structure.
+
+### Strategic Conclusion
+
+The goal is not simply to add AI features to an existing SaaS subscription. It is to transform proprietary advertising intelligence into measurable customer outcomes while maintaining sustainable unit economics.
+
+AdQuest's proposed strategy combines defensible proprietary data, cost-efficient model routing, and outcome-aligned premium pricing.
+
+**Decision:** Proceed with validating the hybrid pricing model and Combined AI Strategy Agent, subject to measured cost-per-outcome, adoption, quality, and willingness-to-pay thresholds.
