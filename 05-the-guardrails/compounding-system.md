@@ -12,7 +12,7 @@
 Pending peer review. Proposed gap to challenge: user corrections may reach support or product without becoming verified evaluation cases and released improvements. Collecting feedback alone does not establish learning.
 
 **Fix plan:**  
-Tony owns weekly triage of reported errors with a designated data/engineering owner. Validate each correction, add a regression case, test the fix, and notify the reporter of the outcome. Track correction-to-fix time and repeat-error rate. Close material issues only after the fix passes evaluation.
+Product owns weekly triage of reported errors with a designated data/engineering owner. Validate each correction, add a regression case, test the fix, and notify the reporter of the outcome. Track correction-to-fix time and repeat-error rate. Close material issues only after the fix passes evaluation.
 
 ## Context Connectivity
 
@@ -34,7 +34,7 @@ Auto: retrieve permitted data, calculate metrics, and draft answers with sources
 Stop the affected action when sources conflict, material claims lack evidence, requested data is unavailable, permissions fail, or restricted data appears. Route analytical issues to product/data, suspected disclosure to security, and contractual questions to legal. Suspected cross-customer exposure blocks the affected retrieval path pending security review.
 
 **Audit cadence:**  
-Weekly — Tony/product reviews 25 sampled answers and all reported material errors. Before every release — engineering tests accuracy, calculations, permissions, and regressions; access-control failures block release. Quarterly — product, security, and legal review policy and incidents. Engineering, security, and legal owners must be named before launch.
+Weekly — Product reviews 25 sampled answers and all reported material errors. Before every release — engineering tests accuracy, calculations, permissions, and regressions; access-control failures block release. Quarterly — product, security, and legal review policy and incidents. Engineering, security, and legal owners must be named before launch.
 
 **Regulatory exposure (EU AI Act / other):**  
 Legal/security must assess applicable privacy and AI requirements, advertising-data licenses, customer agreements, and model-provider terms. EU AI Act applicability and risk tier remain unassigned pending review of intended use and markets. Document permitted data use, retention, deletion, vendor processing, and customer access controls.
