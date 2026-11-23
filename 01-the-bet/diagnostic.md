@@ -3,7 +3,7 @@
 ## Product
 <!-- Name the product you're diagnosing. Real product at your company — not a hypothetical. -->
 
-**Product:** AdImpact SaaS Platform
+**Product:** AdQuest SaaS Platform
 **Your Role:** Product Manager
 
 ---
@@ -15,7 +15,7 @@
 
 **Score rationale:** We have competitors that also understand the context of where we work.
 
-**Named attacker (from partner challenge):** MediaRadar
+**Named attacker (from partner challenge):** MediaRat
 
 ---
 
@@ -24,7 +24,7 @@
 
 **Score rationale:** We have proprietary process to collect, interpret, and model data for use in our platform.
 
-**Named attacker (from partner challenge):** MadiaRadar
+**Named attacker (from partner challenge):** MadiaRat
 
 ---
 
@@ -33,7 +33,7 @@
 
 **Score rationale:** They don't have the context or the data architecture in place to replace us quickly. Their best path would be to purchase and then invest in us or one of our competitors for an immediate win.
 
-**Named attacker (from partner challenge):** Google with MediaRadar
+**Named attacker (from partner challenge):** Google with MediaRat
 
 ---
 
