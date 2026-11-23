@@ -35,34 +35,28 @@
 ## Board Pitch
 
 **Thesis (1 sentence):**
-
-AdQuest will turn proprietary advertising intelligence into evidence-backed next actions, starting with seller prospecting and expanding into a broader AI Strategy Agent only when customer value, reliability, and economics are demonstrated.
+AdQuest will help local TV sellers turn advertising intelligence into evidence-backed prospecting actions, starting with a bounded pilot that must prove time savings, customer adoption, and sustainable economics.
 
 **The case:**
+1. Why now: This advances AdQuest’s core purpose: helping customers use advertising intelligence to make better decisions. We already have specialized data, reporting workflows, and an AI feedback surface; the next step is to test whether those assets shorten sellers’ research-to-action workflow. The timing case rests on those existing capabilities, not a verified external market change. Start with seller prospecting and earn the right to expand.
 
-1. **Why now:** Customers still spend time translating advertising data into prospect lists, competitive insights, and plans. AdQuest already has specialized advertising data and established reporting workflows. A focused AI workflow can test whether we can shorten the distance between research and action, beginning with local TV sellers rather than launching across every customer segment at once.
+2. What's defensible: Our M2 assessment identifies proprietary advertising collection, historical coverage, classifications, estimation methodology, and domain context as the advantage. Competitors can copy the interface; reproducing the underlying data operations and analytical context is harder. However, our flywheel scores only 9/20, with network effects at 1/5. We will strengthen workflow depth through verified corrections and explicit account preferences, and claim compounding only when measured improvements support it.
 
-2. **What's defensible:** Our advantage is proprietary advertising collection, historical coverage, classification, estimation methodology, and domain context. The model and interface are copyable. We will strengthen defensibility through embedded workflows, explicit account preferences, and verified corrections that measurably improve future answers. Our current flywheel score is 9/20; automatic learning and network effects remain opportunities to validate, not established advantages.
-
-3. **The economics:** Proposed pricing is a $100/user/month subscription plus $10 per completed premium AI Strategy Plan. For a user purchasing five plans monthly, the classroom model produces $150 revenue, $28.40 modeled COGS, and 81.1% gross margin before unestimated incremental infrastructure and review costs. At 20% premium adoption, the comparable blended modeled margin is approximately 74.5%. We will validate paid adoption and fully loaded costs; model cascading, caching, and premium usage metering help manage inference exposure.
+3. The economics: $8 per user per month is the modeled routine inference cost at 400 requests. Proposed pricing is $100 per seat plus $10 per completed premium strategy plan. Five paid plans produce 81.1% modeled gross margin for a premium user; at 20% premium adoption, modeled cohort margin is approximately 74.5%. Both exclude unestimated incremental infrastructure, storage, and review costs. In the fixed-$100 base scenario, tripling inference costs reduces modeled margin from 72% to 56%. Routing and caching are proposed controls, not demonstrated savings. The pilot must validate actual payment and at least 65% fully loaded cohort gross margin.
 
 **The risks:**
+1. Trust / failure modes: The most consequential failure is disclosing another customer’s confidential data or presenting an inferred opportunity as confirmed buying intent, available inventory, or guaranteed performance. Enforce permissions before retrieval, distinguish observed facts from inferences and verified conditions, and show dated sources. Before broader release, expand the 11-case starter dataset toward 150 reviewed cases and require ≥92% rubric pass rate, 100% critical hard-check compliance, and <1% unsupported-material-claim rate. Critical failures immediately disable the affected capability; these controls reduce risk but do not guarantee detection of every failure.
 
-1. **Trust / failure modes:** The agent could confuse historical spending with confirmed buying intent, invent inventory availability, or present a forecast as guaranteed performance. Recommendations must distinguish observed facts, AI inferences, and verified business conditions, with sources and dates. Proposed release targets include ≥92% evaluation pass rate, 100% critical hard-check compliance, and <1% unsupported-material-claim rate. Critical failures immediately disable the affected capability.
+2. Scale / governance: At 10x usage, analyst review demand, latency, and delivery costs could undermine the business case. Track review minutes, cost per completed plan, retries, and quality by workflow before increasing access. Product and data teams validate corrections and test fixes before release. Confidential account data remain isolated, and users approve saves, exports, sharing, and connected-system changes. The agent cannot purchase ads, commit budgets, change campaigns, or make contractual promises. Provider portability remains unproven until a tested switch and rollback passes quality and data-policy checks.
 
-2. **Scale / governance:** Human-review demand and infrastructure costs could grow faster than revenue. We will track review minutes, latency, cost per completed plan, and quality by workflow. Permission checks precede retrieval, confidential customer data remain isolated, and saving, sharing, exporting, or changing connected systems requires human approval. The agent cannot autonomously purchase ads, commit budgets, or guarantee outcomes.
-
-3. **Competitive:** MediaRadar or a platform partnering with an advertising-data provider could offer similar AI recommendations. We will compete through trusted domain data and measurable workflow value, while verifying provider portability. If customers do not act on our recommendations, proprietary data alone will not justify continued expansion.
+3. Competitive: The scenario most likely to undermine this bet is a vertical competitor such as MediaRadar pairing comparable intelligence with a more useful seller workflow. We will judge our response through customer behavior rather than feature parity. Stop expansion if fewer than 30% of pilot sellers act on a recommendation or research time falls by less than 20% by week 8. If paid conversion remains below 20% or fully loaded cohort margin falls below 65% at week 12, stop rollout at the proposed packaging and revise the offer.
 
 **The ask:**
+Approve a capped $50,000, 12-week pilot for up to 20 local TV sellers: one dedicated engineer, 0.25 PM, 0.25 data analyst, and fractional security and commercial support. Release $20,000 initially and the remaining $30,000 only after the week 4 readiness review.
 
-Approve a capped **$50,000, 12-week validation pilot** for up to 20 local TV sellers, supported by one dedicated engineer and fractional Product, data/analyst, security, and commercial support.
+The investment buys a tested seller workflow, reviewed evaluation coverage, measured customer actions and research-time savings, and evidence of willingness to pay and fully loaded delivery costs. Confirm staffing costs before kickoff and reduce scope if they exceed the cap.
 
-This is an illustrative planning budget; confirm fully loaded staffing and operating costs before kickoff and reduce scope if necessary.
-
-Release up to **$20,000 for the first four weeks**, then the remaining **$30,000** only after the workflow, evaluation coverage, permissions, and operational ownership pass readiness review.
-
-Stop expansion if the pilot misses either the **30% recommendation action rate** or **20% research-time reduction** target by week 8. At week 12, revise or stop the proposed paid rollout if conversion is below **20%** or fully loaded cohort gross margin is below **65%**. H2 and H3 expansion require separate approval.
+Defer buyer planning, broad CRM integration, and cross-workflow learning experiments until the pilot earns further investment. The existing committed engineering work displaced by this allocation has not been identified; leadership must name and accept that trade-off before kickoff. Budget and staffing are illustrative classroom assumptions.
 
 ## M1 Baseline vs. Now
 *Your 3-sentence AI strategy from Module 1 vs. what you'd say now:*
